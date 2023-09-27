@@ -1,27 +1,23 @@
 <template>
-  <q-layout view="hHh Lpr lff">
-    <q-header class="bg-purple text-white">
+  <q-layout view="hHh Lpr lff" >
+    <q-header class="bg-purple text-white flex" style="height: 100px;">
       <q-toolbar>
         <q-btn
-          dense
           flat
           round
           v-if="$q.screen.lt.md"
           icon="menu"
-          @click="toggleLeftDrawer"
+          @click="drawer = !drawer"
         />
 
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          Title
+        <q-toolbar-title class="q-ml-md flex items-center">
+          <img src="~assets/logos/urbano_logo_white.svg" />
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="drawer"
       side="left"
       overlay
       behavior="mobile"
@@ -100,13 +96,10 @@ export default defineComponent({
   components: {},
 
   setup() {
-    const leftDrawerOpen = ref(false);
+    const drawer = ref(false);
 
     return {
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      drawer,
     };
   },
 });
