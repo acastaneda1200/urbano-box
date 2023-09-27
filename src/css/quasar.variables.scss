@@ -1,0 +1,66 @@
+/* prettier-ignore */
+
+$body-font-family: 'Comfortaa',
+sans-serif;
+$heading-font-family: 'Gotham Rounded',
+sans-serif;
+
+$headings: (
+    'h1': ( 'size': 5rem, 'weight': 400), 'h2': ( 'size': 4rem, 'weight': 400), 
+    'h3': ( 'size': 3.125rem, 'letter-spacing': -.0083333333em), 
+    'h4': ( 'size': 2.5rem), /*40px */
+    'h5': ( 'size': 1.875rem), /*30px */
+    'h6': ( 'size': 1.5625rem, 'weight': 400), 
+    'title-box': ( 'size': 2rem /*32px*/, 'weight': 400, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'title-large-2': ( 'size': 1.75rem /*28px*/, 'weight': 400, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'display-text-2' : ( 'size': 1.625rem /*26px*/, 'weight': 700, 'line-height': inherit, 'letter-spacing': 1px, 'font-family': $body-font-family, 'text-transform': false),
+    'title-large': ( 'size': 1.5rem /*24px*/, 'weight': 350, 'line-height': 28.8px, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'description-extra-large': ( 'size': 1.5rem /*24px*/, 'weight': 400, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'description-large': ( 'size': 1.375rem /*22px*/, 'weight': 700, 'line-height': inherit, 'letter-spacing': 1px, 'font-family': $body-font-family, 'text-transform': false),
+    'title-22-700': ( 'size': 1.375rem /*22px*/, 'weight': 400, 'line-height': inherit, 'letter-spacing': 1px, 'font-family': $heading-font-family, 'text-transform': false),
+    'title-1': ( 'size': 1.25rem /*20px*/, 'weight': 500, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false), 
+    'large': ( 'size': 1.25rem /*20px*/, 'weight': 400, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false), 
+    'category': ( 'size': 1.125rem /*18px*/, 'weight': 500, 'line-height': 21.6px, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false), 
+    'subtitle-1': ('line-height': 1.115rem /*17.84px*/), 
+    'body-1': ('line-height': 1.115rem /*17.84px*/), 
+    'caption': ('line-height': inherit /*17.84px*/), 
+    'category-medium': ( 'size': 1rem /*16px*/, 'weight': 350, 'line-height': inherit, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false), 
+    'description': ( 'size': 1rem /*16px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false), 
+    'category-small': ( 'size': .875rem /*14px*/, 'weight': 350, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'description-small': ( 'size': .875rem /*14px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'description-extra-small': ( 'size': .75rem /*12px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'category-extra-small': ( 'size': .75rem /*12px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'small': ( 'size': .75rem /*12px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'xs': ( 'size': .625rem /*10px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false), 
+    'xs-heading': ( 'size': .625rem /*10px*/, 'weight': 325, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'movil-title-20': ( 'size': 1.25rem /*20px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'movil-title-16': ( 'size': 1rem /*16px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'movil-title-14': ( 'size': .875rem /*14px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'movil-body-12' : ( 'size': .75rem /*12*/, 'weight': 700, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'movil-body-14' : ( 'size': .875rem /*14*/, 'weight': 700, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'movil-label-11' : ( 'size': .688rem /*11*/, 'weight': 700, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'movil-subtitle-11' : ( 'size': .875rem /*14*/, 'weight': 700, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
+    'movil-btn-4' : ( 'size': .875rem /*14px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+    'movil-btn-5' : ( 'size': .75rem /*12px*/, 'weight': 325, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
+) !default;
+
+$text-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  bolder: 900,
+) !default;
+
+$purple: #5C068C;
+$purple-7: #5c0087b3;
+$purple-3: #5c00874d;
+$purple-1: #5c00871a;
+
+
+
+
+
+
+
