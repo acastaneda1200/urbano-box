@@ -51,7 +51,7 @@ module.exports = configure(function (/* ctx */) {
         node: "node16",
       },
 
-      vueRouterMode: "hash", // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -60,7 +60,15 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+          hereMapsApiKey: process.env.HERE_MAPS_API_KEY,
+          google_client_id: process.env.GOOGLE_CLIENT_ID,
+          culqi_public_key: process.env.CULQI_PUBLIC_KEY,
+          back_base_url: process.env.BACK_BASE_URL,
+          recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
+          node_env: process.env.NODE_ENV,
+          corporativo_base_url: process.env.CORPORATIVO_BASE_URL,
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
