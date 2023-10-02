@@ -1,10 +1,17 @@
 <template>
   <q-layout view="hHh Lpr lff">
-    <q-header class="bg-purple text-white flex" style="height: 100px">
+    <q-header
+      v-if="!isAuthRoute"
+      class="bg-purple text-white flex"
+      style="height: 100px"
+    >
       <q-toolbar>
         <q-btn flat class="lt-md" round icon="menu" @click="drawer = !drawer" />
+
         <q-toolbar-title class="q-ml-md flex items-center">
-          <img src="~assets/logos/urbano_logo_white.svg" />
+          <router-link to="/">
+            <img src="~assets/logos/urbano_logo_white.svg" />
+          </router-link>
         </q-toolbar-title>
         <q-btn to="/login" rounded color="white" class="flex-end text-black">
           Login
@@ -110,10 +117,16 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <q-page
+        :style="{
+          backgroundImage: 'url(' + backgroundImage + ')',
+        }"
+      >
+        <router-view />
+      </q-page>
     </q-page-container>
 
-    <q-footer class="bg-black text-white">
+    <q-footer v-if="loggedIn" class="bg-black text-white">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
@@ -126,7 +139,11 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
+import { useRoute } from "vue-router";
+import { useAuthStore } from "stores/auth";
+import { useUtilityStore } from "stores/utility";
+import { storeToRefs } from "pinia";
 
 const linksList = [
   {
@@ -179,10 +196,27 @@ export default defineComponent({
   components: {},
 
   setup() {
+    const route = useRoute();
     const drawer = ref(false);
+    const auth = useAuthStore();
+    const utility = useUtilityStore();
+    const { loggedIn } = storeToRefs(auth);
+    const { backgroundImage } = storeToRefs(utility);
+    const isAuthRoute = computed(() => {
+      const currentPath = route.path;
+      return (
+        !currentPath.includes("order/register") &&
+        (currentPath.includes("change-password") ||
+          currentPath.includes("login") ||
+          currentPath.includes("register"))
+      );
+    });
 
     return {
       drawer,
+      loggedIn,
+      backgroundImage,
+      isAuthRoute,
     };
   },
 });

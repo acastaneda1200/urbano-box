@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const useCounterStore = defineStore('counter', {
+export const useUtilityStore = defineStore('utility', {
   state: () => ({
     backgroundColor: '',
     backgroundImage: '',
@@ -10,8 +10,8 @@ export const useCounterStore = defineStore('counter', {
   getters: {
   },
   actions: {
-    increment() {
-      this.counter++;
+    setBackgroundImage(img) {
+      this.backgroundImage = img;
     },
   },
 });

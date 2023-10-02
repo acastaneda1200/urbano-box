@@ -1,9 +1,8 @@
 /* prettier-ignore */
 
-$body-font-family: 'Comfortaa',
-sans-serif;
-$heading-font-family: 'Gotham Rounded',
-sans-serif;
+
+$body-font-family: 'Comfortaa', sans-serif !default;
+$heading-font-family: 'Gotham Rounded', sans-serif !default;
 
 $headings: (
     'h1': ( 'size': 5rem, 'weight': 400), 'h2': ( 'size': 4rem, 'weight': 400), 
@@ -42,7 +41,7 @@ $headings: (
     'movil-subtitle-11' : ( 'size': .875rem /*14*/, 'weight': 700, 'line-height': normal, 'letter-spacing': normal, 'font-family': $body-font-family, 'text-transform': false),
     'movil-btn-4' : ( 'size': .875rem /*14px*/, 'weight': 400, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
     'movil-btn-5' : ( 'size': .75rem /*12px*/, 'weight': 325, 'line-height': normal, 'letter-spacing': normal, 'font-family': $heading-font-family, 'text-transform': false),
-) !default;
+);
 
 $text-weights: (
   thin: 100,
