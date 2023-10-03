@@ -1,11 +1,11 @@
 /* prettier-ignore */
-
-
 $body-font-family: 'Comfortaa', sans-serif !default;
 $heading-font-family: 'Gotham Rounded', sans-serif !default;
 
+$typography-font-family: 'Comfortaa', sans-serif !default;
+
 $headings: (
-    'h1': ( 'size': 5rem, 'weight': 400), 'h2': ( 'size': 4rem, 'weight': 400), 
+    'h1': ( 'size': 5rem, 'weight': 400), 'h2': ( size: 4rem, weight: 400), 
     'h3': ( 'size': 3.125rem, 'letter-spacing': -.0083333333em), 
     'h4': ( 'size': 2.5rem), /*40px */
     'h5': ( 'size': 1.875rem), /*30px */
@@ -56,6 +56,23 @@ $purple: #5C068C;
 $purple-7: #5c0087b3;
 $purple-3: #5c00874d;
 $purple-1: #5c00871a;
+
+// current size ends
+$breakpoint-xs: 599px !default;
+$breakpoint-sm: 1023px !default;
+$breakpoint-md: 1439px !default;
+$breakpoint-lg: 1919px !default;
+
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default;
+$breakpoint-xs-max: (map-get($sizes, "sm") - 0.02) !default;
+
+@media (max-width: $breakpoint-xs-max) {//not working
+
+  $headings: (
+    'h1': ( 'size': 1.25rem, 'weight': 400), 'h2': ( size: 1rem, weight: 400)
+  );
+}
+
 
 
 

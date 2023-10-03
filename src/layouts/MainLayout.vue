@@ -118,8 +118,11 @@
 
     <q-page-container>
       <q-page
+        class="bg-image"
         :style="{
           backgroundImage: 'url(' + backgroundImage + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }"
       >
         <router-view />
@@ -221,3 +224,9 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss" scoped>
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+}
+</style>

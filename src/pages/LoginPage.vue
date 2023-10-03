@@ -14,11 +14,9 @@
         "
       >
         <q-container>
-          <div>
-            <q-card-section class="text-h2 text-white text-heading">
-              ¡Bienvenid@!
-            </q-card-section>
-          </div>
+          <q-card-section class="text-h2 text-h6-xs text-white text-center">
+            ¡Bienvenid@!
+          </q-card-section>
         </q-container>
       </q-card>
     </div>
